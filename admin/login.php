@@ -53,9 +53,9 @@ include('includes/connection.php');
                                         <input type="submit" value="Log In" class="btn btn-primary pull-right" name="login"/>                         
                                     </div>
                                 </div>
-                                <p style="color:#fff;font-size:16px;">New Here?? Sign Up <strong><a href="http://localhost/e-learning/admin/registration.php">Here</a></strong> </p>
+                                <p style="color:#fff;font-size:16px;">New Here?? Sign Up <strong><a href="http://localhost/webcloud/admin/registration.php">Here</a></strong> </p>
                             </form>
-                            <p style="margin:20px 0;color:#222;text-align:center;font-size:18px;">Go back to the <strong><a href="http://localhost/e-learning/">Site</a></strong> </p>   
+                            <p style="margin:20px 0;color:#222;text-align:center;font-size:18px;">Go back to the <strong><a href="http://localhost/webcloud/">Site</a></strong> </p>   
                         </div>
                     </div>
                 </div>

@@ -38,8 +38,8 @@ include('includes/connection.php');
                         <?php 
                         session_start();    
                         if(!isset($_SESSION['luser_name'])):?>
-                        <li><a href="http://localhost/e-learning/login.php">Learner's Login</a></li>
-                        <li><a href="http://localhost/e-learning/registration.php">Become Learner</a></li>
+                        <li><a href="http://localhost/webcloud/login.php">Learner's Login</a></li>
+                        <li><a href="http://localhost/webcloud/registration.php">Become Learner</a></li>
                         <?php else: ?>
                         <li><strong>Hello <?php echo $_SESSION['luser_name'];?><span>    </span></strong></li>
                         <li><a href="logout.php">Logout</a></li>

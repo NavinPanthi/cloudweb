@@ -47,7 +47,7 @@ if(!isset($_SESSION['user_name'])){
                     <ul>
                        
                         <li>Hello <strong> <?php echo $_SESSION['user_name'];?> </strong></li> 
-                        <li><a href="http://localhost/e-learning/admin/logout.php">Logout</a></li>
+                        <li><a href="http://localhost/webcloud/admin/logout.php">Logout</a></li>
                     </ul>
                 </div>
             </div>
