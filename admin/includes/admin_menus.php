@@ -10,6 +10,7 @@
                         <li><a href="insert_category.php"><i class="fa fa-black-tie"></i>  Add New Category</a></li>
                         <li><a href="view_categories.php"><i class="fa fa-diamond"></i>  View All Categories</a></li>
                         <li><a href="all_instructors.php"><i class="fa fa-adjust"></i>  All Instructors</a></li>  
+                        <li><a href="view_post.php"><i class="fa fa-adjust"></i>  All Posts</a></li>  
                         <li><a href="all_learners.php"><i class="fa fa-adjust"></i>  All Learners</a></li>  
                     </ul>
                 </div>
