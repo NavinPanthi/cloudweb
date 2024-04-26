@@ -31,7 +31,8 @@ CREATE TABLE `categories` (
   `cat_id` int(100) NOT NULL,
   `cat_name` varchar(100) NOT NULL,
   `cat_desc` text NOT NULL,
-  `cat_icon` varchar(50) NOT NULL
+  `cat_icon` varchar(50) NOT NULL,
+  PRIMARY KEY (`cat_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
@@ -58,7 +59,8 @@ CREATE TABLE `instructors` (
   `user_email` varchar(100) NOT NULL,
   `user_pass` varchar(50) NOT NULL,
   `about` text NOT NULL,
-  `admin` tinyint(1) DEFAULT NULL
+  `admin` tinyint(1) DEFAULT NULL,
+  PRIMARY KEY (`user_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
@@ -86,7 +88,8 @@ CREATE TABLE `learners` (
   `luser_email` varchar(50) NOT NULL,
   `luser_pass` varchar(50) NOT NULL,
   `is_dropout` tinyint(1) DEFAULT NULL,
-  `reason` varchar(255) DEFAULT NULL
+  `reason` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`luser_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
@@ -112,7 +115,8 @@ CREATE TABLE `posts` (
   `post_keywords` text NOT NULL,
   `post_image` text NOT NULL,
   `post_content` longtext NOT NULL,
-  `video_link` varchar(200) NOT NULL
+  `video_link` varchar(200) NOT NULL,
+  PRIMARY KEY (`post_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
@@ -126,10 +130,9 @@ INSERT INTO `posts` (`post_id`, `cat_id`, `post_title`, `post_date`, `post_autho
 (22, 13, 'Simple Math Calculations in Daily Life', '31-03-16', 'Jane Smith', 'math, calculations, daily life', 'math-calculations.jpg', '<p>Math is an essential part of our daily lives, even if we don’t always realize it. Here are some examples of simple math calculations that we use in our everyday routines:</p>\r\n<p>1. Budgeting: To manage our finances, we need to calculate our income and expenses to determine how much money we have left to save or spend.</p>\r\n<p>2. Cooking: When following a recipe, we often need to adjust the ingredient quantities based on the number of servings we want to make.</p>\r\n<p>3. Shopping: To compare prices and determine the best value, we need to calculate the cost per unit of each item.</p>\r\n<p>4. Time management: To plan our day, we need to calculate how much time we have available and allocate it to different tasks.</p>\r\n<p>5. Travel: To plan a trip, we need to calculate the distance, time, and cost of transportation.</p>\r\n<p>By practicing simple math calculations in our daily lives, we can improve our problem-solving skills and become more efficient in managing our time and resources.</p>\r\n<p>&nbsp;</p>', ''),
 (23, 13, 'Arithmetic Expressions: A Basic Guide', '31-03-16', 'John Doe', 'arithmetic, expressions, math', 'arithmetic-expressions.jpg', '<h4>Arithmetic Expressions: A Basic Guide</h4>\r\n<p>Arithmetic expressions are mathematical statements that combine numbers and operators to produce a single value. Here are some examples of arithmetic expressions:</p>\r\n<p>1. 5 + 3 = 8</p>\r\n<p>2. 10 - 4 = 6</p>\r\n<p>3. 2 * 7 = 14</p>\r\n<p>4. 8 / 2 = 4</p>\r\n<p>5. (2 + 3) * 4 = 20</p>\r\n<p>Arithmetic expressions follow a specific order of operations, which determines the sequence in which the operations are performed. The order of operations is as follows:</p>\r\n<p>1. Parentheses</p>\r\n<p>2. Exponents</p>\r\n<p>3. Multiplication and Division (from left to right)</p>\r\n<p>4. Addition and Subtraction (from left to right)</p>\r\n<p>By understanding arithmetic expressions and the order of operations, you can perform complex calculations with ease.</p>\r\n<p>&nbsp;</p>', ''),
 (25, 13, 'Understanding Trigonometry: Functions and Applications', '31-03-16', 'Amit Kollol Dey', 'trigonometry, functions, applications', 'trigonometry_image.jpg', '<h4>Understanding Trigonometry: Functions and Applications</h4>\r\n<p>Trigonometry is a branch of mathematics that deals with the relationships between the angles and sides of triangles. It has numerous applications in various fields such as engineering, physics, computer science, and more. In this post, we will explore the basic functions of trigonometry and their applications.</p>\r\n<h4>Trigonometric Functions</h4>\r\n<p>There are six basic trigonometric functions: sine, cosine, tangent, cosecant, secant, and cotangent. These functions relate the angles of a right triangle to the lengths of its sides. The values of these functions can be calculated using the following formulas:</p>\r\n<ul>\r\n<li>Sine of an angle = opposite side / hypotenuse</li>\r\n<li>Cosine of an angle = adjacent side / hypotenuse</li>\r\n<li>Tangent of an angle = opposite side / adjacent side</li>\r\n<li>Cosecant of an angle = hypotenuse / opposite side</li>\r\n<li>Secant of an angle = hypotenuse / adjacent side</li>\r\n<li>Cotangent of an angle = adjacent side / opposite side</li>\r\n</ul>\r\n<h4>Applications of Trigonometry</h4>\r\n<p>Trigonometry has numerous applications in various fields. Some of the common applications are:</p>\r\n<ul>\r\n<li>Engineering: Trigonometry is used in the design and analysis of structures such as bridges, buildings, and dams.</li>\r\n<li>Physics: Trigonometry is used in the study of waves, oscillations, and vibrations.</li>\r\n<li>Computer Science: Trigonometry is used in computer graphics to create 3D models and animations.</li>\r\n<li>Navigation: Trigonometry is used in navigation to calculate distances and directions.</li>\r\n</ul>\r\n<p>In conclusion, trigonometry is a powerful tool that has numerous applications in various fields. Understanding the basic functions and their applications is essential for success in many areas of study and work.</p>', ''),
-(27, 10, 'Understanding Computer Networking Basics', '31-03-16', 'Amit Kollol Dey', 'computer networking, basics, protocols', 'computer-networking.jpg', '<p>Computer networking is a complex and ever-evolving field that involves connecting computers and other devices to share resources and communicate with each other. Here are some basic concepts to help you understand computer networking:</p>\r\n<p>1. Network topology: The arrangement of devices and cables in a network. Common topologies include star, ring, and bus.</p>\r\n<p>2. Network protocols: The rules and standards that govern how data is transmitted over a network. Examples include TCP/IP and HTTP.</p>\r\n<p>3. Network hardware: The physical components of a network, such as routers, switches, and cables.</p>\r\n<p>4. Network software: The programs and applications that enable devices to communicate over a network, such as web browsers and email clients.</p>\r\n<p>5. Network security: The measures taken to protect a network and its data from unauthorized access and attacks.</p>\r\n<p>Understanding these basic concepts is essential for anyone working with computer networks. Whether you are setting up a home network or managing a large corporate network, having a solid foundation in networking basics will help you troubleshoot issues and optimize performance.</p>\r\n<p>&nbsp;</p>', ''),
-(27, 10, 'Understanding Basic Physics Concepts', '31-03-16', 'Amit Kollol Dey', 'physics, basics, concepts', 'basic-physics.jpg', '<p>Physics is a fundamental branch of science that deals with the properties and interactions of matter and energy. Here are some basic concepts to help you understand physics:</p>\r\n<p>1. Matter: Matter is anything that has mass and takes up space. It can exist in different states such as solid, liquid, and gas.</p>\r\n<p>2. Energy: Energy is the ability to do work. It can come in different forms such as kinetic energy, potential energy, thermal energy, and electromagnetic energy.</p>\r\n<p>3. Force: A force is a push or pull upon an object resulting from the object interaction with another object. Forces can cause objects to accelerate, slow down, or change direction.</p>\r\n<p>4. Motion: Motion refers to the change in position of an object over time. It can be described in terms of distance, displacement, speed, velocity, and acceleration.</p>\r\n<p>5. Gravity: Gravity is a force that attracts two objects towards each other. On Earth, gravity gives objects weight and causes them to fall towards the ground.</p>\r\n<p>Understanding these basic concepts is essential for anyone studying physics. Whether you are a student or a professional, having a solid foundation in physics concepts will help you solve problems and make sense of the world around you.</p>\r\n<p>&nbsp;</p>', '');
-
-
+(27, 10, 'Understanding Computer Networking Basics', '31-03-16', 'Amit Kollol Dey', 'computer networking, basics, protocols', 'computer-networking.jpg', '<p>Computer networking is a complex and ever-evolving field that involves connecting computers and other devices to share resources and communicate with each other. Here are some basic concepts to help you understand computer networking:</p>\r\n<p>1. Network topology: The arrangement of devices and cables in a network. Common topologies include star, ring, and bus.</p>\r\n<p>2. Network protocols: The rules and standards that govern how data is transmitted over a network. Examples include TCP/IP and HTTP.</p>\r\n<p>3. Network hardware: The physical components of a network, such as routers, switches, and cables.</p>\r\n<p>4. IP addressing: The method used to assign unique addresses to devices on a network, allowing them to communicate with each other.</p>\r\n<p>5. Network security: Measures taken to protect a network from unauthorized access, data breaches, and other security threats.</p>\r\n<p>By understanding these basic concepts, you can begin to explore the world of computer networking and develop the skills needed to design, implement, and manage networks.</p>\r\n<p>&nbsp;</p>', ''),
+(28, 10, 'Introduction to Network Security', '31-03-16', 'Jane Smith', 'network security, introduction, cyber threats', 'network-security.jpg', '<p>Network security is a critical aspect of modern computing, as it involves protecting the integrity, confidentiality, and availability of information transmitted over a network. Here are some key concepts to help you understand network security:</p>\r\n<p>1. Confidentiality: Ensuring that sensitive information is only accessible to authorized individuals or entities.</p>\r\n<p>2. Integrity: Ensuring that data remains unchanged during transmission and storage.</p>\r\n<p>3. Availability: Ensuring that network resources are accessible to authorized users when needed.</p>\r\n<p>4. Authentication: Verifying the identity of users and devices accessing the network.</p>\r\n<p>5. Authorization: Determining the permissions and privileges granted to users and devices based on their identity and role.</p>\r\n<p>6. Encryption: Encoding data to prevent unauthorized access and protect it from eavesdropping.</p>\r\n<p>7. Firewalls: Devices or software applications that monitor and control incoming and outgoing network traffic based on predetermined security rules.</p>\r\n<p>By implementing robust network security measures, organizations can mitigate the risk of cyber threats and safeguard their sensitive information.</p>\r\n<p>&nbsp;</p>', ''),
+(29, 10, 'Common Network Security Threats and How to Mitigate Them', '31-03-16', 'John Doe', 'network security, threats, mitigation', 'network-security-threats.jpg', '<p>Network security threats pose a significant risk to organizations, as they can lead to data breaches, financial losses, and reputational damage. Here are some common network security threats and how to mitigate them:</p>\r\n<p>1. Malware: Malicious software designed to infiltrate and damage computer systems. To mitigate this threat, organizations should use antivirus software, keep systems updated, and train employees on safe browsing practices.</p>\r\n<p>2. Phishing: Attempts to trick individuals into revealing sensitive information such as passwords and financial details. To mitigate this threat, organizations should educate employees about phishing scams, use email filtering software, and implement multi-factor authentication.</p>\r\n<p>3. DDoS attacks: Distributed Denial of Service attacks that overwhelm a network with traffic, causing it to become slow or unavailable. To mitigate this threat, organizations should use DDoS mitigation services, configure firewalls to block suspicious traffic, and maintain redundant network infrastructure.</p>\r\n<p>4. Insider threats: Malicious or negligent actions by employees, contractors, or business partners. To mitigate this threat, organizations should implement strict access controls, monitor user activity, and provide cybersecurity training to employees.</p>\r\n<p>5. Zero-day exploits: Attacks that target previously unknown vulnerabilities in software or hardware. To mitigate this threat, organizations should keep systems updated with the latest security patches, use intrusion detection systems to detect suspicious activity, and implement network segmentation to contain potential breaches.</p>\r\n<p>By understanding these common network security threats and implementing appropriate countermeasures, organizations can enhance their security posture and reduce the risk of cyber attacks.</p>\r\n<p>&nbsp;</p>', '');
 
 -- --------------------------------------------------------
 
@@ -138,16 +141,16 @@ INSERT INTO `posts` (`post_id`, `cat_id`, `post_title`, `post_date`, `post_autho
 --
 
 CREATE TABLE `slider` (
-  `slide_id` int(100) NOT NULL,
-  `slide_image` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+  `slide_id` int(11) NOT NULL,
+  `slide_image` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `slider`
 --
 
 INSERT INTO `slider` (`slide_id`, `slide_image`) VALUES
-(7, 'banner.png'),
+(7, 'banner.png');
 
 --
 -- Indexes for dumped tables
@@ -156,14 +159,7 @@ INSERT INTO `slider` (`slide_id`, `slide_image`) VALUES
 --
 -- Indexes for table `categories`
 --
-ALTER TABLE `categories`
-  ADD PRIMARY KEY (`cat_id`);
 
---
--- Indexes for table `instructors`
---
-ALTER TABLE `instructors`
-  ADD PRIMARY KEY (`user_id`);
 
 --
 -- Indexes for table `learners`
@@ -175,7 +171,8 @@ ALTER TABLE `learners`
 -- Indexes for table `posts`
 --
 ALTER TABLE `posts`
-  ADD PRIMARY KEY (`post_id`);
+  ADD PRIMARY KEY (`post_id`),
+  ADD KEY `cat_id` (`cat_id`);
 
 --
 -- Indexes for table `slider`
@@ -191,13 +188,7 @@ ALTER TABLE `slider`
 -- AUTO_INCREMENT for table `categories`
 --
 ALTER TABLE `categories`
-  MODIFY `cat_id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
-
---
--- AUTO_INCREMENT for table `instructors`
---
-ALTER TABLE `instructors`
-  MODIFY `user_id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `cat_id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `learners`
@@ -209,13 +200,13 @@ ALTER TABLE `learners`
 -- AUTO_INCREMENT for table `posts`
 --
 ALTER TABLE `posts`
-  MODIFY `post_id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+  MODIFY `post_id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 
 --
 -- AUTO_INCREMENT for table `slider`
 --
 ALTER TABLE `slider`
-  MODIFY `slide_id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `slide_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
