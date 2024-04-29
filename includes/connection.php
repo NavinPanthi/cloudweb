@@ -1,3 +1,3 @@
 <?php
-$con = mysqli_connect('localhost','root','','elearning') or die('Error Establishing Database Connection!!');
+$con = mysqli_connect('http://sqldb.coxsctuir3ip.us-east-1.rds.amazonaws.com','admin','sqldb123','elearning') or die('Error Establishing Database Connection!!');
 ?>
