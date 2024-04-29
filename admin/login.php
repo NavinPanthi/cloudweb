@@ -1,5 +1,7 @@
-<?php 
+<?php
 include('includes/connection.php');
+error_reporting(E_ALL);
+ini_set('display_errors', 'On');
 ?>
 <!doctype html>
 <html class="no-js" lang="en">

@@ -1,4 +1,9 @@
-            <div class="menu_top">
+<?php
+error_reporting(E_ALL);
+ini_set('display_errors', 'On');
+?>
+
+          <div class="menu_top">
                 <ul>
                     <li><a href="index.php">Home</a></li> 
                     <?php 

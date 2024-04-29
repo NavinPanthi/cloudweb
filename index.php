@@ -1,6 +1,8 @@
-<?php 
-include("includes/header.php");
+<?php
+include('includes/header.php');
+
 ?>
+
 <section class="slider_area">
     <div class="container">
         <div class="row">

@@ -1,4 +1,10 @@
-            <div class="col-md-4 col-sm-4 col-xs-12">
+<?php
+error_reporting(E_ALL);
+ini_set('display_errors', 'On');
+?>
+
+           
+           <div class="col-md-4 col-sm-4 col-xs-12">
                 <div class="sidebar_right">
                    <div class="search_sidebar">
                         <form action="search.php" class="search_bar" method="get">

@@ -1,3 +1,8 @@
+<?php
+error_reporting(E_ALL);
+ini_set('display_errors', 'On');
+?>
+
 <footer class="footer_area">
     <div class="container">
         <div class="row">

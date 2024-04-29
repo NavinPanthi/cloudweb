@@ -1,6 +1,9 @@
-<?php 
-include("includes/header.php");
-?> 
+<?php
+include('includes/hedader.php');
+error_reporting(E_ALL);
+ini_set('display_errors', 'On');
+?>
+
 <section class="featured_categories">
    <div class="container">
        <div class="row">

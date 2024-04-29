@@ -1,4 +1,8 @@
-<?php include("includes/header.php");?>
+<?php
+include('includes/header.php');
+error_reporting(E_ALL);
+ini_set('display_errors', 'On');
+?>
  
  <?php 
     if(isset($_GET['del_user'])){
