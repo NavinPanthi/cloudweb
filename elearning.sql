@@ -27,13 +27,13 @@ SET time_zone = "+00:00";
 -- Table structure for table `categories`
 --
 
-CREATE TABLE `categories` (
-  `cat_id` int(100) NOT NULL,
+CREATE TABLE IF NOT EXISTS `categories` (
+  `cat_id` int(100) NOT NULL AUTO_INCREMENT,
   `cat_name` varchar(100) NOT NULL,
   `cat_desc` text NOT NULL,
   `cat_icon` varchar(50) NOT NULL,
-  PRIMARY KEY (`cat_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+   PRIMARY KEY (`cat_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=16;
 
 --
 -- Dumping data for table `categories`
@@ -51,8 +51,8 @@ INSERT INTO `categories` (`cat_id`, `cat_name`, `cat_desc`, `cat_icon`) VALUES
 -- Table structure for table `instructors`
 --
 
-CREATE TABLE `instructors` (
-  `user_id` int(100) NOT NULL,
+CREATE TABLE IF NOT EXISTS `instructors` (
+  `user_id` int(100) NOT NULL AUTO_INCREMENT,
   `user_fname` text NOT NULL,
   `user_lname` text NOT NULL,
   `user_name` varchar(100) NOT NULL,
@@ -60,8 +60,8 @@ CREATE TABLE `instructors` (
   `user_pass` varchar(50) NOT NULL,
   `about` text NOT NULL,
   `admin` tinyint(1) DEFAULT NULL,
-  PRIMARY KEY (`user_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+    PRIMARY KEY (`user_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=8;
 
 --
 -- Dumping data for table `instructors`
@@ -80,8 +80,8 @@ INSERT INTO `instructors` (`user_id`, `user_fname`, `user_lname`, `user_name`, `
 -- Table structure for table `learners`
 --
 
-CREATE TABLE `learners` (
-  `luser_id` int(100) NOT NULL,
+CREATE TABLE IF NOT EXISTS `learners` (
+  `luser_id` int(100) NOT NULL AUTO_INCREMENT,
   `luser_fname` text NOT NULL,
   `luser_lname` text NOT NULL,
   `luser_name` varchar(50) NOT NULL,
@@ -89,8 +89,8 @@ CREATE TABLE `learners` (
   `luser_pass` varchar(50) NOT NULL,
   `is_dropout` tinyint(1) DEFAULT NULL,
   `reason` varchar(255) DEFAULT NULL,
-  PRIMARY KEY (`luser_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+    PRIMARY KEY (`luser_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=2;
 
 --
 -- Dumping data for table `learners`
@@ -105,9 +105,8 @@ INSERT INTO `learners` (`luser_id`, `luser_fname`, `luser_lname`, `luser_name`, 
 --
 -- Table structure for table `posts`
 --
-
-CREATE TABLE `posts` (
-  `post_id` int(100) NOT NULL,
+CREATE TABLE IF NOT EXISTS `posts` (
+  `post_id` int(100) NOT NULL AUTO_INCREMENT,
   `cat_id` int(100) NOT NULL,
   `post_title` varchar(100) NOT NULL,
   `post_date` text NOT NULL,
@@ -117,7 +116,7 @@ CREATE TABLE `posts` (
   `post_content` longtext NOT NULL,
   `video_link` varchar(200) NOT NULL,
   PRIMARY KEY (`post_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=28 ;
 
 --
 -- Dumping data for table `posts`
@@ -139,11 +138,11 @@ INSERT INTO `posts` (`post_id`, `cat_id`, `post_title`, `post_date`, `post_autho
 --
 -- Table structure for table `slider`
 --
-
-CREATE TABLE `slider` (
-  `slide_id` int(11) NOT NULL,
-  `slide_image` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+CREATE TABLE IF NOT EXISTS `slider` (
+  `slide_id` int(100) NOT NULL AUTO_INCREMENT,
+  `slide_image` text NOT NULL,
+  PRIMARY KEY (`slide_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=11 ;
 
 --
 -- Dumping data for table `slider`
@@ -152,62 +151,7 @@ CREATE TABLE `slider` (
 INSERT INTO `slider` (`slide_id`, `slide_image`) VALUES
 (7, 'banner.png');
 
---
--- Indexes for dumped tables
---
 
---
--- Indexes for table `categories`
---
-
-
---
--- Indexes for table `learners`
---
-ALTER TABLE `learners`
-  ADD PRIMARY KEY (`luser_id`);
-
---
--- Indexes for table `posts`
---
-ALTER TABLE `posts`
-  ADD PRIMARY KEY (`post_id`),
-  ADD KEY `cat_id` (`cat_id`);
-
---
--- Indexes for table `slider`
---
-ALTER TABLE `slider`
-  ADD PRIMARY KEY (`slide_id`);
-
---
--- AUTO_INCREMENT for dumped tables
---
-
---
--- AUTO_INCREMENT for table `categories`
---
-ALTER TABLE `categories`
-  MODIFY `cat_id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
-
---
--- AUTO_INCREMENT for table `learners`
---
-ALTER TABLE `learners`
-  MODIFY `luser_id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-
---
--- AUTO_INCREMENT for table `posts`
---
-ALTER TABLE `posts`
-  MODIFY `post_id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
-
---
--- AUTO_INCREMENT for table `slider`
---
-ALTER TABLE `slider`
-  MODIFY `slide_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
-COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
