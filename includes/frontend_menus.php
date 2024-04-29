@@ -2,7 +2,6 @@
 error_reporting(E_ALL);
 ini_set('display_errors', 'On');
 ?>
-
           <div class="menu_top">
                 <ul>
                     <li><a href="index.php">Home</a></li> 
@@ -15,7 +14,7 @@ ini_set('display_errors', 'On');
                     ?>
                     <li><a href="single-cat.php?cat_id=<?php echo $category_id;?>"><?php echo $category_name;?></a></li>
                     <?php endwhile;?>
-                    <li><a href="#">All Course Categories</a>
+                    <li><a href="#">All Courses Categories</a>
                         <ul>
                            <?php 
                             $cat2 = "select * from categories";
