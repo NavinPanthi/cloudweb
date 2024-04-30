@@ -7,9 +7,10 @@ ini_set('display_errors', 'On');
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <div class="copyright text-center">
+                <div class="copyright text-center ">
                     <a href="#"><img src="images/logo.png" alt=""></a>
                     <p>&copy;2016 | All right reserved by E-Learning</p>
+                    <a class="ml-2" href="https://mxrb9w7oie.execute-api.us-east-1.amazonaws.com/getlambda">Test our Lambda API</a>
                 </div>
             </div>
         </div>

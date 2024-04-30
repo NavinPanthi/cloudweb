@@ -10,7 +10,7 @@ include('includes/header.php');
         <ul class="bxslider">
             <?php 
             // Insert the image directly into the PHP code
-            echo '<li><img src="http://imagebuck.s3.amazonaws.com/students.jpeg" /></li>';
+            echo '<li><img class="imgaws" src="http://imagebuck.s3.amazonaws.com/students.jpeg" /></li>';
             
             // Retrieve slider images from the database
             $slide = "SELECT * FROM slider ORDER BY rand()";
