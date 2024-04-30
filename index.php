@@ -3,21 +3,25 @@ include("includes/header.php");
 ?>
 <section class="slider_area">
     <div class="container">
-        <div class="row">
-           <div class="col-md-12">
-                <ul class="bxslider">
-                <?php 
-                $slide = "select * from slider ORDER BY rand()";
-                $run_slider = mysqli_query($con,$slide); 
-                while($slider_row = mysqli_fetch_array($run_slider)):
-                $slide_id = $slider_row ['slide_id'];
-                $slide_image = $slider_row ['slide_image'];
-                ?>
-                <li><img src="admin/images/slider/<?php echo $slide_image;?>" /></li> 
-                <?php endwhile;?> 
-                </ul>
-           </div> 
-        </div>
+    <div class="row">
+    <div class="col-md-12">
+        <ul class="bxslider">
+            <?php 
+            // Insert the image directly into the PHP code
+            echo '<li><img class="imgaws" src="http://imagebuck.s3.amazonaws.com/students.jpeg" /></li>';
+            
+            // Retrieve slider images from the database
+            $slide = "SELECT * FROM slider ORDER BY rand()";
+            $run_slider = mysqli_query($con, $slide); 
+            while($slider_row = mysqli_fetch_array($run_slider)):
+                $slide_image = $slider_row['slide_image'];
+            ?>
+            <li><img src="admin/images/slider/<?php echo $slide_image; ?>" /></li> 
+            <?php endwhile;?> 
+        </ul>
+    </div> 
+</div>
+
     </div>
 </section>
 <section class="featured_categories">
